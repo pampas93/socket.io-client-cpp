@@ -1,4 +1,10 @@
 # Socket.IO C++ Client
+---
+### pampas93 changes
+- Upgrade to Visual studio 2017 for the console example application
+- Update head of submodules (rapidjson and websockets)
+
+---
 [![Build Status](https://travis-ci.org/socketio/socket.io-client-cpp.svg)](https://travis-ci.org/socketio/socket.io-client-cpp)
 
 By virtue of being written in C++, this client works in several different platforms. The [examples](https://github.com/socketio/socket.io-client-cpp/tree/master/examples) folder contains an iPhone, QT and Console example chat client! It depends on [websocket++](https://github.com/zaphoyd/websocketpp) and is inspired by [socket.io-clientpp](https://github.com/ebshimizu/socket.io-clientpp).
