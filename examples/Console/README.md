@@ -1,3 +1,30 @@
+
+---
+## SioChatDemo setup
+
+### Updates after Fork
+- Updated to use Visual Studio 2017
+- Using boost 1.69.0
+- Updated **rapidjson** submodule to 
+- Updated **websockets** submodule to 
+
+
+### Steps to run the application,
+- `git clone --recurse-submodules  https://github.com/pampas93/socket.io-client-cpp.git`
+  - Cloning the socket.io-client-cpp repo along with the submodules (rapidjson and websockets)
+- Download and build **boost** 
+  - Built using boost 1.69.0 [Download link](https://www.boost.org/users/history/version_1_69_0.html)
+  - Open cmd in the uncompressed directory,  run `bootstrap.bat`
+  - Then, run `.\b2` to build boost
+- Open SioChatDemo.sln in VS 2017 and link boost to the `SioChatDemo.vcxproj`
+  - Right click on SioChatDemo project > Properties
+  - C++ > General > Additional Include directories
+  - Include boost_1_69_0 directory
+  
+
+---
+Out-dated readme (from main repo)
+---
 #SioChatDemo setup
 This Demo is create with `Visual Studio 2012 Update 4` , It is a simple console app, connect to official [socket.io chatroom example](https://github.com/Automattic/socket.io/tree/master/examples/chat) as a chat client.
 
