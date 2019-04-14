@@ -111,14 +111,14 @@ MAIN_FUNC
     h.set_open_listener(std::bind(&connection_listener::on_connected, &l));
     h.set_close_listener(std::bind(&connection_listener::on_close, &l,std::placeholders::_1));
     h.set_fail_listener(std::bind(&connection_listener::on_fail, &l));
-    h.connect("http://localhost:8090");
+    h.connect("http://127.0.0.1:3000");
     _lock.lock();
     if(!connect_finish)
     {
         _cond.wait(_lock);
     }
     _lock.unlock();
-    current_socket = h.socket();
+	current_socket = h.socket();
 Login:
     string nickname;
     while (nickname.length() == 0) {
